@@ -1,11 +1,12 @@
+/* ---------product picture size --------- */
 .product-pic {
     width: 75%;
 }
-
+/* ---------horizontal line customization--------- */
 hr.customline{
     border : 1px solid black;
 }
-
+/* ---------inputbox customization--------- */
 input.customborder {
     border: 1px solid #9e9e9e;
     border-radius: 5px;
