@@ -52,14 +52,11 @@ document.getElementById('promoBtn').addEventListener('click', function () {
 //note pls re check the vdo and update the price
 //-----------memory part event-------------------
 customizationCostAdd('8gb', 0, false, 'memory-cost');
-customizationCostAdd('16gb', 100, true, 'memory-cost');
+customizationCostAdd('16gb', 180, true, 'memory-cost');
 //-----------stotage part event-------------------
 customizationCostAdd("256gb-ssd", 0, false, 'storage-cost');
-customizationCostAdd("512gb-ssd", 150, true, 'storage-cost');
-customizationCostAdd("1tb-ssd", 200, true, 'storage-cost');
+customizationCostAdd("512gb-ssd", 100, true, 'storage-cost');
+customizationCostAdd("1tb-ssd", 180, true, 'storage-cost');
 //-----------delivery part event-------------------
 customizationCostAdd('free', 0, false, 'delivery-cost');
 customizationCostAdd('paid', 20, true, 'delivery-cost');
-
-
-
