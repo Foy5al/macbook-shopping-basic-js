@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy A Mac-Book</title>
+    <!-- ----------------Favicon link--------------- -->
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <!-- ----------------Tailwind cdn link--------------- -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
@@ -17,12 +18,15 @@
     <section class="container mx-auto my-12">
 
         <div class="grid grid-cols-2 gap-10 mx-auto px-8">
-            <!-- -------container left side ---------------- -->
+            <!-- ---------------------- left side container Start------------------------------- -->
             <div>
                 <img class="justify-end product-pic mx-auto" src="images/mac.png" alt="">
             </div>
-            <!-- -----------container right side -------------------- -->
+            <!-- ---------------------- left side container End------------------------------- -->
+
+            <!-- ------------------------------- right side container start ------------------------------- -->
             <div class="grid gap-8">
+
                 <!-- product name and info section -->
                 <div>
                     <h1 class="font-bold text-gray-800 text-4xl">Customize your Blue 24-inch iMac with Apple M1 chip.
@@ -33,7 +37,7 @@
                         Magic Keyboard - US English</p>
                 </div>
 
-                <!-- memory section -->
+                <!-- -------------------------------memory section ------------------------------- -->
                 <div>
                     <h1 class="font-bold text-gray-800 text-base">Memory</h1>
                     <button id="8gb"
@@ -44,7 +48,7 @@
                         unified Memory</button>
                 </div>
 
-                <!-- storage section  -->
+                <!-- -------------------------------storage section------------------------------- -->
                 <div>
                     <h1 class="font-bold text-gray-800 text-base">Storage</h1>
                     <button id="256gb-ssd"
@@ -58,7 +62,7 @@
                         SSD Storage</button>
                 </div>
 
-                <!-- delivery section -->
+                <!-- -------------------------------delivery section------------------------------- -->
                 <div>
                     <h1 class="font-bold text-gray-800 text-base">Chose your delivery option</h1>
                     <button id="free"
@@ -69,7 +73,7 @@
                         Nov 8 Delivery Charge $20</button>
                 </div>
 
-                <!-- total price section -->
+                <!-- -------------------------------total price section------------------------------- -->
                 <div class="lg:mr-40 font-bold text-base text-gray-800 grid gap-2">
                     <div class="flex justify-between gap-8">
                         <h5>Best Price</h5>
@@ -101,6 +105,8 @@
 
 
                 </div>
+
+                <!-- -------------------------------promo section------------------------------- -->
                 <div>
                     <h5 class="font-medium mb-2">Add Promo code</h5>
                     <input id="promoInput" class="customborder .shadow py-2 px-2 w-1/2" type="text">
@@ -109,6 +115,7 @@
                 </div>
             </div>
         </div>
+        <!-- -------------------------------Final price section------------------------------- -->
         <hr class="my-5">
         <h1 class="my-5 font-bold text-gray-800 text-4xl text-center">Total: $<span id="afterPromoTotal">1299</span>
         </h1>
@@ -116,7 +123,7 @@
 
     </section>
 
-
+    <!-- -------------------------------js file connection link------------------------------- -->
     <script src=" js/app.js">
     </script>
 </body>

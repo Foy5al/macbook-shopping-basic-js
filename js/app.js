@@ -1,57 +1,59 @@
-
+//-----------macbook customization button part ---------------
 function customizationCostAdd(memoryAmount, price, incrasePrice, updatePriceid) {
     document.getElementById(memoryAmount).addEventListener('click', function () {
         const extraCostAdded = document.getElementById(updatePriceid);
 
         if (incrasePrice) {
             extraCostAdded.innerText = price;
+            //-------------------call cost calculation function-------------------
             customCostCalculation();
         }
         else {
             extraCostAdded.innerText = price;
+            //-------------------call cost calculation function-------------------
             customCostCalculation();
         }
     });
 };
 
-// -----------calculation part-----------------------------
+// -----------------cost calculation part-----------------------
 function customCostCalculation() {
     const listOfCalculationID = ['best-price', 'memory-cost', 'storage-cost', 'delivery-cost'];
 
-    let idCalledNum = 0;
-    for (const callId of listOfCalculationID) {
-        const idCalled = document.getElementById(callId).innerText;
-        idCalledNum = parseFloat(idCalled) + idCalledNum;
+    let costOfCustomizeItems = 0;
+    for (const getSingleID of listOfCalculationID) {
+
+        const idCalled = document.getElementById(getSingleID).innerText;
+        costOfCustomizeItems = parseFloat(idCalled) + costOfCustomizeItems;
     };
 
-    console.log('this is total', idCalledNum);
     const totalPrice = document.getElementById('total-price');
 
-    totalPrice.innerText = idCalledNum;
-    document.getElementById('afterPromoTotal').innerText = idCalledNum;
-
+    totalPrice.innerText = costOfCustomizeItems;
+    document.getElementById('afterPromoTotal').innerText = costOfCustomizeItems;
 };
 
+//------------------promo code section-------------------------
 document.getElementById('promoBtn').addEventListener('click', function () {
-    const promoCode = 'stevekaku';
-    promoCode.toLowerCase();
+    const promoCode = 'stEvekaku';
     const promo = document.getElementById('promoInput').value;
-    promo.toLowerCase();
 
-    if (promoCode == promo) {
+    if (promoCode.toLowerCase() == promo.toLowerCase()) {
 
         const totalinTxt = document.getElementById('total-price');
         const totalinNumber = parseInt(totalinTxt.innerText);
         document.getElementById('afterPromoTotal').innerText = totalinNumber - (totalinNumber / 100) * 20;
-        console.log('promo applied', totalinNumber);
+
+    }
+    else {
+        alert('This is a wrong promocode use this >> stevekaku <<');
     }
     document.getElementById('promoInput').value = '';
-
 });
 
-//note pls re check the vdo and update the price
+// --------------------------function calling part--------------------------
 //-----------memory part event-------------------
-customizationCostAdd('8gb', 0, false, 'memory-cost');
+customizationCostAdd('8gb', 0, false, 'memory-cost'); //(id-of-button, price, argument, id-of-update-section)
 customizationCostAdd('16gb', 180, true, 'memory-cost');
 //-----------stotage part event-------------------
 customizationCostAdd("256gb-ssd", 0, false, 'storage-cost');
